@@ -2,7 +2,7 @@ import request from "axios";
 
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
-interface IResponseWeatherData {
+export interface IResponseWeatherData {
   /** Internal parameter */
   message: string;
   /** Internal parameter */
