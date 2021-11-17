@@ -150,3 +150,7 @@ export const getCityList = async (
 export const getIconUrl = (iconId: string) => {
   return `https://openweathermap.org/img/wn/${iconId}@2x.png`;
 };
+
+export const getCountryFlag = (country: string) => {
+  return `https://openweathermap.org/images/flags/${country.toLocaleLowerCase()}.png`;
+};
