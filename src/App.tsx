@@ -12,13 +12,14 @@ const App: React.FC = () => {
     <React.Fragment>
       <CssBaseline />
       <h1>Weather app</h1>
+
       <Button
         variant="contained"
         onClick={() => {
           getWeather("London");
         }}
       >
-        Search
+        Refresh
       </Button>
 
       {loading ? (
