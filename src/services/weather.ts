@@ -112,7 +112,7 @@ export interface IResponseCityList {
  * @link https://openweathermap.org/current#name
  */
 export const getWeatherByCityName = async (
-  city: string = "Luxembourg"
+  city: string
 ): Promise<ICityWeather> => {
   const { data } = await request.get<ICityWeather>(`${API_URL}/weather`, {
     params: {

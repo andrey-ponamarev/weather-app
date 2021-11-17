@@ -11,7 +11,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
 const App: React.FC = () => {
-  const { loading, getWeather, data } = useWeather();
+  const { loading, getWeather, data, setCurrentPlace } = useWeather();
   const { settings, toggleField } = useSettings();
 
   return (
@@ -19,7 +19,7 @@ const App: React.FC = () => {
       <CssBaseline />
       <Grid container spacing={2} alignContent="center">
         <Grid item xs={12} mt={2}>
-          <SearchBox />
+          <SearchBox onSelect={setCurrentPlace} />
         </Grid>
       </Grid>
       <Settings settings={settings} toggleField={toggleField} />

@@ -6,7 +6,11 @@ import { ICityWeather } from "../../services/weather";
 import Box from "@mui/material/Box";
 import useSearch from "../../hooks/useSearch";
 
-const SearchBox = () => {
+interface IProps {
+  onSelect: (city: ICityWeather) => void;
+}
+
+const SearchBox: React.FC<IProps> = (props) => {
   const { loading, data, searchPlace } = useSearch();
   const [inputValue, setInputValue] = React.useState("");
   const [options, setOptions] = React.useState<ICityWeather[]>([]);
@@ -55,8 +59,7 @@ const SearchBox = () => {
       options={options}
       loading={loading}
       onChange={(event, place) => {
-        // TODO: set active place
-        console.log("onChange", place);
+        props.onSelect(place as ICityWeather);
       }}
       freeSolo
       renderOption={(props, option) => (
