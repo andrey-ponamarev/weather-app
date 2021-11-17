@@ -1,10 +1,16 @@
-import Button, { ButtonProps } from "@mui/material/Button";
 import RefreshIcon from "@mui/icons-material/Refresh";
+import Fab, { FabProps } from "@mui/material/Fab";
+import { styled } from "@mui/material/styles";
 
-const RefreshButton = (props: ButtonProps) => (
-  <Button variant="contained" startIcon={<RefreshIcon />} {...props}>
-    Refresh
-  </Button>
+const StyledFab = styled(Fab)`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+`;
+const RefreshButton = (props: FabProps) => (
+  <StyledFab {...props} color="primary" aria-label="refresh">
+    <RefreshIcon />
+  </StyledFab>
 );
 
 export default RefreshButton;
