@@ -3,11 +3,14 @@ import Avatar from "@mui/material/Avatar";
 import { getIconUrl, ICityWeather } from "../../services/weather";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import { ISettings } from "../../hooks/useSettings";
 
 interface IProps {
   data: ICityWeather;
+  settings: ISettings;
 }
-const WeatherPreview: React.FC<IProps> = ({ data }) => {
+
+const WeatherPreview: React.FC<IProps> = ({ data, settings }) => {
   const { main, wind } = data;
   const currentWeather = data.weather[0];
   return (
@@ -43,9 +46,15 @@ const WeatherPreview: React.FC<IProps> = ({ data }) => {
         </Typography>
       </Grid>
       <Grid item>
-        <Typography>Pressure: {main.pressure}</Typography>
-        <Typography>Humidity: {main.humidity}</Typography>
-        <Typography>Wind speed: {wind.speed}m/s</Typography>
+        {settings.pressure && (
+          <Typography>Pressure: {main.pressure}</Typography>
+        )}
+        {settings.humidity && (
+          <Typography>Humidity: {main.humidity}</Typography>
+        )}
+        {settings.windSpeed && (
+          <Typography>Wind speed: {wind.speed}m/s</Typography>
+        )}
       </Grid>
     </Grid>
   );

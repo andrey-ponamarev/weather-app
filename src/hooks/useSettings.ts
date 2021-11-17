@@ -1,8 +1,12 @@
 import { useState } from "react";
 
-interface ISettings {
-  [key: string]: boolean;
+export interface ISettings {
+  pressure: boolean;
+  humidity: boolean;
+  windSpeed: boolean;
 }
+
+export type ISettingField = keyof ISettings;
 
 const useSettings = () => {
   const [settings, setSettings] = useState<ISettings>({
@@ -11,7 +15,7 @@ const useSettings = () => {
     windSpeed: true,
   });
 
-  const toggleField = (field: string) => {
+  const toggleField = (field: ISettingField) => {
     if (settings.hasOwnProperty(field)) {
       setSettings({ ...settings, [field]: !settings[field] });
     }

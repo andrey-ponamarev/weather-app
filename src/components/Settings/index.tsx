@@ -5,22 +5,32 @@ import FormControl from "@mui/material/FormControl";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import useSettings from "../../hooks/useSettings";
+import { ISettings, ISettingField } from "../../hooks/useSettings";
 
-const Settings = () => {
-  const { settings, toggleField } = useSettings();
-  const [options, setOptions] = useState<string[]>([]);
+interface ISettingsProps {
+  settings: ISettings;
+  toggleField: (field: ISettingField) => void;
+}
+
+enum SettingsLabels {
+  pressure = "Pressure",
+  humidity = "Humidity",
+  windSpeed = "Wind speed",
+}
+
+const Settings: React.FC<ISettingsProps> = ({ settings, toggleField }) => {
+  const [options, setOptions] = useState<ISettingField[]>([]);
 
   useEffect(() => {
     if (settings) {
-      const settingKeys = Object.keys(settings);
+      const settingKeys = Object.keys(settings) as ISettingField[];
 
       setOptions(settingKeys);
     }
   }, [settings]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    toggleField(event.target.name);
+    toggleField(event.target.name as ISettingField);
   };
 
   return (
@@ -28,7 +38,7 @@ const Settings = () => {
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
         <FormLabel component="legend">Settings</FormLabel>
         <FormGroup>
-          {options.map((option: string) => (
+          {options.map((option: ISettingField) => (
             <FormControlLabel
               key={option}
               control={
@@ -38,7 +48,7 @@ const Settings = () => {
                   name={option}
                 />
               }
-              label={option}
+              label={SettingsLabels[option]}
             />
           ))}
         </FormGroup>

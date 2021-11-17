@@ -6,16 +6,18 @@ import useWeather from "./hooks/useWeather";
 import WeatherPreview from "./components/WeatherPreview";
 import Settings from "./components/Settings";
 import SearchBox from "./components/SearchBox";
+import useSettings from "./hooks/useSettings";
 
 const App: React.FC = () => {
   const { loading, getWeather, data } = useWeather();
+  const { settings, toggleField } = useSettings();
 
   return (
     <React.Fragment>
       <CssBaseline />
       <h1>Weather app</h1>
       <SearchBox />
-      <Settings />
+      <Settings settings={settings} toggleField={toggleField} />
       <Button
         variant="contained"
         onClick={() => {
@@ -28,7 +30,7 @@ const App: React.FC = () => {
       {loading ? (
         <Skeleton />
       ) : data ? (
-        <WeatherPreview data={data} />
+        <WeatherPreview data={data} settings={settings} />
       ) : (
         <div>Click search button</div>
       )}
