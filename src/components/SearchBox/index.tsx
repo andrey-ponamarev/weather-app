@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import CircularProgress from "@mui/material/CircularProgress";
 import { ICityWeather } from "../../services/weather";
 import Box from "@mui/material/Box";
 import useSearch from "../../hooks/useSearch";
+import debounce from "lodash/debounce";
 
 interface IProps {
   onSelect: (city: ICityWeather) => void;
@@ -12,23 +13,23 @@ interface IProps {
 
 const SearchBox: React.FC<IProps> = (props) => {
   const { loading, data, searchPlace } = useSearch();
-  const [inputValue, setInputValue] = React.useState("");
-  const [options, setOptions] = React.useState<ICityWeather[]>([]);
+  const [inputValue, setInputValue] = useState("");
+  const [options, setOptions] = useState<ICityWeather[]>([]);
 
-  React.useEffect(() => {
-    if (data === null) {
-      return;
+  const updateSearch = useCallback(debounce(searchPlace, 500), []);
+
+  // Display options from dropdown
+  useEffect(() => {
+    if (data !== null) {
+      setOptions(data.list);
     }
-
-    setOptions(data.list);
   }, [data, loading]);
 
-  React.useEffect(() => {
-    if (inputValue === "" || inputValue.length < 3) {
-      return;
+  // Search for query
+  useEffect(() => {
+    if (inputValue.length > 3) {
+      updateSearch(inputValue);
     }
-    // TODO: implement debounce to avoid a lot of API calls
-    searchPlace(inputValue);
   }, [inputValue]);
 
   return (
