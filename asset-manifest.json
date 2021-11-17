@@ -1,23 +1,19 @@
 {
   "files": {
-    "main.css": "/andrey-ponamarev/weather-app/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/andrey-ponamarev/weather-app/static/js/main.a9137663.chunk.js",
-    "main.js.map": "/andrey-ponamarev/weather-app/static/js/main.a9137663.chunk.js.map",
-    "runtime-main.js": "/andrey-ponamarev/weather-app/static/js/runtime-main.c05be19f.js",
-    "runtime-main.js.map": "/andrey-ponamarev/weather-app/static/js/runtime-main.c05be19f.js.map",
-    "static/js/2.ced52b16.chunk.js": "/andrey-ponamarev/weather-app/static/js/2.ced52b16.chunk.js",
-    "static/js/2.ced52b16.chunk.js.map": "/andrey-ponamarev/weather-app/static/js/2.ced52b16.chunk.js.map",
-    "static/js/3.61f5429e.chunk.js": "/andrey-ponamarev/weather-app/static/js/3.61f5429e.chunk.js",
-    "static/js/3.61f5429e.chunk.js.map": "/andrey-ponamarev/weather-app/static/js/3.61f5429e.chunk.js.map",
+    "main.js": "/andrey-ponamarev/weather-app/static/js/main.ca674dd9.chunk.js",
+    "main.js.map": "/andrey-ponamarev/weather-app/static/js/main.ca674dd9.chunk.js.map",
+    "runtime-main.js": "/andrey-ponamarev/weather-app/static/js/runtime-main.c999f174.js",
+    "runtime-main.js.map": "/andrey-ponamarev/weather-app/static/js/runtime-main.c999f174.js.map",
+    "static/js/2.8a4b25ea.chunk.js": "/andrey-ponamarev/weather-app/static/js/2.8a4b25ea.chunk.js",
+    "static/js/2.8a4b25ea.chunk.js.map": "/andrey-ponamarev/weather-app/static/js/2.8a4b25ea.chunk.js.map",
+    "static/js/3.7adaaf6d.chunk.js": "/andrey-ponamarev/weather-app/static/js/3.7adaaf6d.chunk.js",
+    "static/js/3.7adaaf6d.chunk.js.map": "/andrey-ponamarev/weather-app/static/js/3.7adaaf6d.chunk.js.map",
     "index.html": "/andrey-ponamarev/weather-app/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/andrey-ponamarev/weather-app/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.ced52b16.chunk.js.LICENSE.txt": "/andrey-ponamarev/weather-app/static/js/2.ced52b16.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/andrey-ponamarev/weather-app/static/media/logo.6ce24c58.svg"
+    "static/js/2.8a4b25ea.chunk.js.LICENSE.txt": "/andrey-ponamarev/weather-app/static/js/2.8a4b25ea.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c05be19f.js",
-    "static/js/2.ced52b16.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.a9137663.chunk.js"
+    "static/js/runtime-main.c999f174.js",
+    "static/js/2.8a4b25ea.chunk.js",
+    "static/js/main.ca674dd9.chunk.js"
   ]
 }
