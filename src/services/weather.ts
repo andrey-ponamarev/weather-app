@@ -102,6 +102,15 @@ export interface ICityWeather {
   sys: ISysField;
 }
 
+export interface IResponseCityList {
+  count: number;
+  list: ICityWeather[];
+}
+
+/**
+ * Call current weather data for one location
+ * @link https://openweathermap.org/current#name
+ */
 export const getWeatherByCityName = async (
   city: string = "Luxembourg"
 ): Promise<ICityWeather> => {
@@ -110,6 +119,24 @@ export const getWeatherByCityName = async (
       q: city,
       appid: process.env.REACT_APP_OPEN_WEATHER_KEY,
       units: "metric", // For temperature in Celsius
+    },
+  });
+
+  return data;
+};
+
+/**
+ * Returns list of cities by given query
+ * @link https://openweathermap.org/current#data
+ */
+export const getCityList = async (
+  query: string
+): Promise<IResponseCityList> => {
+  const { data } = await request.get<IResponseCityList>(`${API_URL}/find`, {
+    params: {
+      q: query,
+      appid: process.env.REACT_APP_OPEN_WEATHER_KEY,
+      units: "metric",
     },
   });
 

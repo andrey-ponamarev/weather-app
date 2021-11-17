@@ -5,6 +5,7 @@ import Skeleton from "@mui/material/Skeleton";
 import useWeather from "./hooks/useWeather";
 import WeatherPreview from "./components/WeatherPreview";
 import Settings from "./components/Settings";
+import SearchBox from "./components/SearchBox";
 
 const App: React.FC = () => {
   const { loading, getWeather, data } = useWeather();
@@ -13,6 +14,7 @@ const App: React.FC = () => {
     <React.Fragment>
       <CssBaseline />
       <h1>Weather app</h1>
+      <SearchBox />
       <Settings />
       <Button
         variant="contained"
