@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { getWeather, IResponseWeatherData } from "../services/weather";
+import { ICityWeather, getWeatherByCityName } from "../services/weather";
 
 const useWeather = () => {
-  const [data, setData] = useState<IResponseWeatherData | null>(null);
+  const [data, setData] = useState<ICityWeather | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -11,7 +11,7 @@ const useWeather = () => {
       setLoading(true);
       setError(null);
 
-      const data = await getWeather(city);
+      const data = await getWeatherByCityName(city);
       setData(data);
     } catch (err) {
       setData(null);
