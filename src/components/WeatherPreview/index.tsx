@@ -11,8 +11,9 @@ interface IProps {
 }
 
 const WeatherPreview: React.FC<IProps> = ({ data, settings }) => {
-  const { main, wind } = data;
+  const { main, wind, name } = data;
   const currentWeather = data.weather[0];
+
   return (
     <Grid
       container
@@ -34,6 +35,9 @@ const WeatherPreview: React.FC<IProps> = ({ data, settings }) => {
             />
           </Grid>
         </Grid>
+      </Grid>
+      <Grid item>
+        <Typography variant="h6">{name}</Typography>
       </Grid>
       <Grid item>
         <Typography>

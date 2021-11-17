@@ -31,7 +31,7 @@ const App: React.FC = () => {
       ) : data ? (
         <WeatherPreview data={data} settings={settings} />
       ) : (
-        <div>Click search button</div>
+        <div>Sorry, try again later</div>
       )}
     </Container>
   );
