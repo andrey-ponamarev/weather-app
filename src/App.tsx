@@ -1,6 +1,6 @@
 import React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
-import Button from "@mui/material/Button";
+
 import Skeleton from "@mui/material/Skeleton";
 import useWeather from "./hooks/useWeather";
 import WeatherPreview from "./components/WeatherPreview";
@@ -9,6 +9,7 @@ import SearchBox from "./components/SearchBox";
 import useSettings from "./hooks/useSettings";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import RefreshButton from "./components/RefreshButton";
 
 const App: React.FC = () => {
   const { loading, getWeather, data, setCurrentPlace } = useWeather();
@@ -23,15 +24,8 @@ const App: React.FC = () => {
         </Grid>
       </Grid>
       <Settings settings={settings} toggleField={toggleField} />
-      <Button
-        variant="contained"
-        onClick={() => {
-          getWeather("London");
-        }}
-      >
-        Refresh
-      </Button>
 
+      <RefreshButton onClick={() => getWeather("London")} />
       {loading ? (
         <Skeleton />
       ) : data ? (
