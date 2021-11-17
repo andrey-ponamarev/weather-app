@@ -7,16 +7,21 @@ import WeatherPreview from "./components/WeatherPreview";
 import Settings from "./components/Settings";
 import SearchBox from "./components/SearchBox";
 import useSettings from "./hooks/useSettings";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 
 const App: React.FC = () => {
   const { loading, getWeather, data } = useWeather();
   const { settings, toggleField } = useSettings();
 
   return (
-    <React.Fragment>
+    <Container>
       <CssBaseline />
-      <h1>Weather app</h1>
-      <SearchBox />
+      <Grid container spacing={2} alignContent="center">
+        <Grid item xs={12} mt={2}>
+          <SearchBox />
+        </Grid>
+      </Grid>
       <Settings settings={settings} toggleField={toggleField} />
       <Button
         variant="contained"
@@ -34,7 +39,7 @@ const App: React.FC = () => {
       ) : (
         <div>Click search button</div>
       )}
-    </React.Fragment>
+    </Container>
   );
 };
 
