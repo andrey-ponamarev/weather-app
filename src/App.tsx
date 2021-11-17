@@ -1,9 +1,9 @@
 import React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Button from "@mui/material/Button";
-
 import Skeleton from "@mui/material/Skeleton";
 import useWeather from "./hooks/useWeather";
+import WeatherPreview from "./components/WeatherPreview";
 
 const App: React.FC = () => {
   const { loading, getWeather, data } = useWeather();
@@ -25,7 +25,7 @@ const App: React.FC = () => {
       {loading ? (
         <Skeleton />
       ) : data ? (
-        <div>Show data</div>
+        <WeatherPreview data={data} />
       ) : (
         <div>Click search button</div>
       )}
