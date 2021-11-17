@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/andrey-ponamarev/weather-app/static/js/main.c7cdd3c0.chunk.js",
-    "main.js.map": "/andrey-ponamarev/weather-app/static/js/main.c7cdd3c0.chunk.js.map",
-    "runtime-main.js": "/andrey-ponamarev/weather-app/static/js/runtime-main.a6779954.js",
-    "runtime-main.js.map": "/andrey-ponamarev/weather-app/static/js/runtime-main.a6779954.js.map",
-    "static/js/2.12254916.chunk.js": "/andrey-ponamarev/weather-app/static/js/2.12254916.chunk.js",
-    "static/js/2.12254916.chunk.js.map": "/andrey-ponamarev/weather-app/static/js/2.12254916.chunk.js.map",
-    "static/js/3.6b799afb.chunk.js": "/andrey-ponamarev/weather-app/static/js/3.6b799afb.chunk.js",
-    "static/js/3.6b799afb.chunk.js.map": "/andrey-ponamarev/weather-app/static/js/3.6b799afb.chunk.js.map",
-    "index.html": "/andrey-ponamarev/weather-app/index.html",
-    "static/js/2.12254916.chunk.js.LICENSE.txt": "/andrey-ponamarev/weather-app/static/js/2.12254916.chunk.js.LICENSE.txt"
+    "main.js": "/weather-app/static/js/main.c7cdd3c0.chunk.js",
+    "main.js.map": "/weather-app/static/js/main.c7cdd3c0.chunk.js.map",
+    "runtime-main.js": "/weather-app/static/js/runtime-main.74b9b143.js",
+    "runtime-main.js.map": "/weather-app/static/js/runtime-main.74b9b143.js.map",
+    "static/js/2.12254916.chunk.js": "/weather-app/static/js/2.12254916.chunk.js",
+    "static/js/2.12254916.chunk.js.map": "/weather-app/static/js/2.12254916.chunk.js.map",
+    "static/js/3.6b799afb.chunk.js": "/weather-app/static/js/3.6b799afb.chunk.js",
+    "static/js/3.6b799afb.chunk.js.map": "/weather-app/static/js/3.6b799afb.chunk.js.map",
+    "index.html": "/weather-app/index.html",
+    "static/js/2.12254916.chunk.js.LICENSE.txt": "/weather-app/static/js/2.12254916.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a6779954.js",
+    "static/js/runtime-main.74b9b143.js",
     "static/js/2.12254916.chunk.js",
     "static/js/main.c7cdd3c0.chunk.js"
   ]
