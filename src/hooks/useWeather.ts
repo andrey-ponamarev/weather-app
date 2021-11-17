@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { ICityWeather, getWeatherByCityName } from "../services/weather";
 
+const DEFAULT_PLACE = "Luxembourg";
+
 const useWeather = () => {
   const [data, setData] = useState<ICityWeather | null>(null);
   const [loading, setLoading] = useState(false);
@@ -22,16 +24,28 @@ const useWeather = () => {
   };
 
   useEffect(() => {
-    // Initial city to display
-    loadData("Luxembourg");
+    loadData(DEFAULT_PLACE);
   }, []);
+
+  const refreshData = () => {
+    if (loading) {
+      return;
+    }
+
+    if (data === null) {
+      loadData(DEFAULT_PLACE);
+    } else {
+      loadData(data.name);
+    }
+  };
 
   return {
     loading,
-    getWeather: loadData,
-    setCurrentPlace: setData,
     error,
     data,
+    refreshData,
+    getWeather: loadData,
+    setCurrentPlace: setData,
   };
 };
 

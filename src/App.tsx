@@ -1,7 +1,6 @@
 import React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
-
-import Skeleton from "@mui/material/Skeleton";
+import CircularProgress from "@mui/material/CircularProgress";
 import useWeather from "./hooks/useWeather";
 import WeatherPreview from "./components/WeatherPreview";
 import Settings from "./components/Settings";
@@ -10,9 +9,11 @@ import useSettings from "./hooks/useSettings";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import RefreshButton from "./components/RefreshButton";
+import Box from "@mui/material/Box";
+import LinearProgress from "@mui/material/LinearProgress";
 
 const App: React.FC = () => {
-  const { loading, getWeather, data, setCurrentPlace } = useWeather();
+  const { loading, data, setCurrentPlace, refreshData } = useWeather();
   const { settings, toggleField } = useSettings();
 
   return (
@@ -25,9 +26,11 @@ const App: React.FC = () => {
       </Grid>
       <Settings settings={settings} toggleField={toggleField} />
 
-      <RefreshButton onClick={() => getWeather("London")} />
+      <RefreshButton onClick={refreshData} />
       {loading ? (
-        <Skeleton />
+        <Box sx={{ width: "100%" }}>
+          <LinearProgress />
+        </Box>
       ) : data ? (
         <WeatherPreview data={data} settings={settings} />
       ) : (
