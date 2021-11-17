@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/andrey-ponamarev/weather-app/static/js/main.646749d0.chunk.js",
-    "main.js.map": "/andrey-ponamarev/weather-app/static/js/main.646749d0.chunk.js.map",
-    "runtime-main.js": "/andrey-ponamarev/weather-app/static/js/runtime-main.f71ef283.js",
-    "runtime-main.js.map": "/andrey-ponamarev/weather-app/static/js/runtime-main.f71ef283.js.map",
-    "static/js/2.c85645b9.chunk.js": "/andrey-ponamarev/weather-app/static/js/2.c85645b9.chunk.js",
-    "static/js/2.c85645b9.chunk.js.map": "/andrey-ponamarev/weather-app/static/js/2.c85645b9.chunk.js.map",
-    "static/js/3.567ea9b8.chunk.js": "/andrey-ponamarev/weather-app/static/js/3.567ea9b8.chunk.js",
-    "static/js/3.567ea9b8.chunk.js.map": "/andrey-ponamarev/weather-app/static/js/3.567ea9b8.chunk.js.map",
+    "main.js": "/andrey-ponamarev/weather-app/static/js/main.c7cdd3c0.chunk.js",
+    "main.js.map": "/andrey-ponamarev/weather-app/static/js/main.c7cdd3c0.chunk.js.map",
+    "runtime-main.js": "/andrey-ponamarev/weather-app/static/js/runtime-main.a6779954.js",
+    "runtime-main.js.map": "/andrey-ponamarev/weather-app/static/js/runtime-main.a6779954.js.map",
+    "static/js/2.12254916.chunk.js": "/andrey-ponamarev/weather-app/static/js/2.12254916.chunk.js",
+    "static/js/2.12254916.chunk.js.map": "/andrey-ponamarev/weather-app/static/js/2.12254916.chunk.js.map",
+    "static/js/3.6b799afb.chunk.js": "/andrey-ponamarev/weather-app/static/js/3.6b799afb.chunk.js",
+    "static/js/3.6b799afb.chunk.js.map": "/andrey-ponamarev/weather-app/static/js/3.6b799afb.chunk.js.map",
     "index.html": "/andrey-ponamarev/weather-app/index.html",
-    "static/js/2.c85645b9.chunk.js.LICENSE.txt": "/andrey-ponamarev/weather-app/static/js/2.c85645b9.chunk.js.LICENSE.txt"
+    "static/js/2.12254916.chunk.js.LICENSE.txt": "/andrey-ponamarev/weather-app/static/js/2.12254916.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f71ef283.js",
-    "static/js/2.c85645b9.chunk.js",
-    "static/js/main.646749d0.chunk.js"
+    "static/js/runtime-main.a6779954.js",
+    "static/js/2.12254916.chunk.js",
+    "static/js/main.c7cdd3c0.chunk.js"
   ]
 }
