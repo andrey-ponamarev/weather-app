@@ -1,6 +1,11 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Weather application
+
+## Quick demo
+[Link to the application](https://andrey-ponamarev.github.io/weather-app/)
+
+## Development
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and use [OpenWhether](https://openweathermap.org) API
 
 ## Available Scripts
 
